@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Creative-Agency-landing/static/css/main.073c9b0a.css",
+    "main.js": "/Creative-Agency-landing/static/js/main.591bfad0.js",
+    "static/js/787.28faf2c0.chunk.js": "/Creative-Agency-landing/static/js/787.28faf2c0.chunk.js",
+    "static/media/logo.svg": "/Creative-Agency-landing/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Creative-Agency-landing/index.html",
+    "main.073c9b0a.css.map": "/Creative-Agency-landing/static/css/main.073c9b0a.css.map",
+    "main.591bfad0.js.map": "/Creative-Agency-landing/static/js/main.591bfad0.js.map",
+    "787.28faf2c0.chunk.js.map": "/Creative-Agency-landing/static/js/787.28faf2c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.591bfad0.js"
+  ]
+}
