@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
+import { BoxStyled, ButtonStyled, MenuIconStyled, ModalListItem, ModalNav } from './Modal.styled';
 
 const style = {
   position: 'absolute',
@@ -25,21 +26,31 @@ export default function BasicModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}><MenuIcon/></Button>
+      <Button onClick={handleOpen}><MenuIconStyled/></Button>
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Service</li>
-            <li>Projects</li>
-          </ul>
-        </Box>
+        <BoxStyled>
+          <ModalNav>
+            <ModalListItem>
+              <a href='#'>Home</a>
+            </ModalListItem>
+            <ModalListItem>
+              <a href='#'>About</a>
+            </ModalListItem>
+            <ModalListItem>
+              <a href='#'>Service</a>
+            </ModalListItem>
+            <ModalListItem>
+              <a href='#'>Projects</a>
+            </ModalListItem>
+          </ModalNav>
+
+          <ButtonStyled type='button'>Contact Us</ButtonStyled>
+        </BoxStyled>
       </Modal>
     </div>
   );

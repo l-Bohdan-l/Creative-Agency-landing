@@ -4,6 +4,7 @@ body {
   font-family: sans-serif;
   line-height: 1.5;
   background-color: #0D0D0D;
+  margin: 0;
 }
 h1,
 h2,
@@ -23,6 +24,10 @@ ol {
   padding-left: 0;
 }
 
+ul {
+  list-style: none;
+}
+
 img {
   display: block;
 }
@@ -33,4 +38,9 @@ img {
 
 .link {
   text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

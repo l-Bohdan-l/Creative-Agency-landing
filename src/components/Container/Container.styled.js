@@ -6,5 +6,6 @@ export const ContainerStyled = styled.div`
     padding-top: 40px;
     padding-right: 25px;
     padding-left: 25px;
-    padding-bottom: 60px;   
+    padding-bottom: 60px;
+    box-sizing: border-box;   
 `;
