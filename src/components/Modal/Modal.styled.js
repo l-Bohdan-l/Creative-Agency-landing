@@ -1,4 +1,5 @@
-import { Menu } from "@mui/material";
+// import { Menu } from "@mui/material";
+import Button from '@mui/material/Button';
 import { styled } from "styled-components";
 import Box from '@mui/material/Box';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -40,7 +41,47 @@ export const ModalListItem = styled.li`
     text-transform: capitalize;
     &:hover,
     &:focus {
-        color: #E2E2E2;
+        color: #F2F2F2;
+    }
+`;
+
+// export const ButtonStyled = styled.button`
+//     display: flex;
+//     padding: 12px 50px;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 10px;
+//     border-radius: 24px;
+//     border: 1px solid #E2E2E2;
+//     border-radius: 24px;
+//     background-color: transparent;
+//     color: #E2E2E2;
+//     cursor: pointer;
+
+//     &:hover,
+//     &:focus {
+//         color: #F2F2F2;
+//         border: 1px solid #F2F2F2;
+//     }
+// `;
+
+export const MenuIconStyled = styled(MenuIcon)`
+    color: #E2E2E2;
+    @media screen and (min-width: 1440px) {
+        display: none;
+    }
+`;
+
+export const ModalButtonStyled = styled(Button)`
+    @media screen and (min-width: 1440px) {
+        display: none;
+    }
+`;
+
+export const Wrapper = styled.div`
+    @media screen and (min-width: 1440px) {
+        display: none;
     }
 `;
 
@@ -56,9 +97,11 @@ export const ButtonStyled = styled.button`
     border-radius: 24px;
     background-color: transparent;
     color: #E2E2E2;
-`;
+    cursor: pointer;
 
-export const MenuIconStyled = styled(MenuIcon)`
-    color: #E2E2E2;
-
+    &:hover,
+    &:focus {
+        color: #F2F2F2;
+        border: 1px solid #F2F2F2;
+    }
 `;
