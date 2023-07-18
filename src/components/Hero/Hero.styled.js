@@ -81,7 +81,11 @@ export const HeroImage = styled.img`
     margin: 0 auto;
     border-radius: 12px;
 
-    
+    @media screen and (min-width: 1440px) {
+        width: 740px;
+        height: 500px;
+        border-radius: 50px;
+    }
 `;
 
 export const HeroImgPicture = styled.picture`
@@ -98,5 +102,29 @@ export const HeroImgPicture = styled.picture`
         left: -10px;
         z-index: -1;
         display: inline-block;
+
+        @media screen and (min-width: 1440px) {
+            top: -20px;
+            left: 400px;
+        }
+    }
+
+    &::after {
+        content: ""; 
+        background-image: url(${orangeDots});
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 98px;
+        height: 70px;
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        z-index: -1;
+        display: inline-block;
+
+        @media screen and (min-width: 1440px) {
+            top: 440px;
+            left: 400px;
+        }
     }
 `;
