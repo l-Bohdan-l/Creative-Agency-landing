@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
 import greyDots from "../../img/svg/greyDots.svg";
 import orangeDots from "../../img/svg/orangeDots.svg";
-import blueDot from "../../img/svg/blueDot.svg";
-import orangeDot from "../../img/svg/orangeDot.svg";
+// import blueDot from "../../img/svg/blueDot.svg";
+// import orangeDot from "../../img/svg/orangeDot.svg";
 
 export const HeroContainer = styled.section`
   margin-bottom: 100px;
