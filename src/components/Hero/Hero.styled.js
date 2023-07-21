@@ -71,6 +71,14 @@ export const StyledButton = styled.button`
   line-height: 18px; /* 150% */
   letter-spacing: 0.12px;
   margin-bottom: 40px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background: #377dff;
+    box-shadow: 0px 4px 8px 0px rgba(55, 125, 255, 0.5);
+    color: #e2e2e2;
+  }
 
   @media screen and (min-width: 1440px) {
     width: 200px;
