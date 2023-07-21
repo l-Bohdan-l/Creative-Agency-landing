@@ -5,6 +5,7 @@ import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
 import Portfolio from "./components/Portfolio/Portfolio";
 import OurServices from "./components/Services/OurServices";
+import Testimonial from "./components/Testimonial/Testimonial";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
         <AboutUs />
         <OurServices />
         <Portfolio />
+        <Testimonial />
       </ContainerStyled>
     </>
   );
