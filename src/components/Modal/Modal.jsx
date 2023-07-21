@@ -1,9 +1,17 @@
-import * as React from 'react';
+import * as React from "react";
 
 // import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-import { useState } from 'react';
-import { ButtonStyled, MenuIconStyled, Wrapper, BoxStyled, ModalNav, ModalListItem, ModalButtonStyled} from './Modal.styled';
+import Modal from "@mui/material/Modal";
+import { useState } from "react";
+import {
+  ButtonStyled,
+  MenuIconStyled,
+  Wrapper,
+  BoxStyled,
+  ModalNav,
+  ModalListItem,
+  ModalButtonStyled,
+} from "./Modal.styled";
 
 export default function BasicModal() {
   const [open, setOpen] = useState(false);
@@ -12,7 +20,9 @@ export default function BasicModal() {
 
   return (
     <Wrapper>
-      <ModalButtonStyled onClick={handleOpen}><MenuIconStyled/></ModalButtonStyled>
+      <ModalButtonStyled onClick={handleOpen}>
+        <MenuIconStyled />
+      </ModalButtonStyled>
       <Modal
         open={open}
         onClose={handleClose}
@@ -22,20 +32,20 @@ export default function BasicModal() {
         <BoxStyled>
           <ModalNav>
             <ModalListItem>
-              {/* <a href='#'>Home</a> */}
+              <a href="#">Home</a>
             </ModalListItem>
             <ModalListItem>
-              {/* <a href='#'>About</a> */}
+              <a href="#">About</a>
             </ModalListItem>
             <ModalListItem>
-              {/* <a href='#'>Service</a> */}
+              <a href="#">Service</a>
             </ModalListItem>
             <ModalListItem>
-              {/* <a href='#'>Projects</a> */}
+              <a href="#">Projects</a>
             </ModalListItem>
           </ModalNav>
 
-          <ButtonStyled type='button'>Contact Us</ButtonStyled>
+          <ButtonStyled type="button">Contact Us</ButtonStyled>
         </BoxStyled>
         {/* {children} */}
       </Modal>

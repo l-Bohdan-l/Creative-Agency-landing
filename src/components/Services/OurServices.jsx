@@ -1,9 +1,14 @@
 import {
   AboutUsSubtitle,
   Button,
+  IconStyled,
+  IconWrapper,
   List,
+  ListItem,
+  ListItemText,
   MainText,
   MainTitle,
+  OurServiceWrapper,
   OurServicesSection,
 } from "./OurServices.styled";
 import pen from "../../img/svg/pen-tool.svg";
@@ -16,49 +21,51 @@ import LiveTvOutlinedIcon from "@mui/icons-material/LiveTvOutlined";
 export default function OurServices() {
   return (
     <OurServicesSection>
-      <MainTitle>Our Services</MainTitle>
-      <AboutUsSubtitle>Perfect and Fast Movement</AboutUsSubtitle>
-      <MainText>
-        We move with make a Creative Strategy for help your business goal, we
-        help to improve your income by a services we have. make your content
-        look interesting and make people look for your business
-      </MainText>
-      <Button>
-        Read more <ArrowForwardOutlinedIcon />
-      </Button>
+      <OurServiceWrapper>
+        <MainTitle>Our Services</MainTitle>
+        <AboutUsSubtitle>Perfect and Fast Movement</AboutUsSubtitle>
+        <MainText>
+          We move with make a Creative Strategy for help your business goal, we
+          help to improve your income by a services we have. make your content
+          look interesting and make people look for your business
+        </MainText>
+        <Button>
+          Read more <ArrowForwardOutlinedIcon />
+        </Button>
+      </OurServiceWrapper>
       <List>
-        <li>
+        <ListItem>
           <div>
-            <div>
-              <DesktopWindowsOutlinedIcon />
-            </div>
-            <p>Social Media Management</p>
+            <IconWrapper position="first">
+              <DesktopWindowsOutlinedIcon sx={{ fontSize: 42 }} />
+            </IconWrapper>
+            <ListItemText>Social Media Management</ListItemText>
           </div>
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <div>
-            <div>
-              <SettingsOutlinedIcon />
-            </div>
-            <p>Search Engine Optimization</p>
+            <IconWrapper position="second">
+              <SettingsOutlinedIcon sx={{ fontSize: 42 }} />
+            </IconWrapper>
+            <ListItemText>Search Engine Optimization</ListItemText>
           </div>
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <div>
-            <div>
-              <img src={pen} alt="pen" />
-            </div>
-            <p>Design</p>
+            <IconWrapper position="third">
+              <IconStyled src={pen} alt="pen" />
+            </IconWrapper>
+            <ListItemText>Design</ListItemText>
           </div>
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <div>
-            <div>
-              <LiveTvOutlinedIcon />
-            </div>
-            <p>Ads</p>
+            <IconWrapper position="fourth">
+              <LiveTvOutlinedIcon sx={{ fontSize: 42 }} />
+            </IconWrapper>
+            <ListItemText>Ads</ListItemText>
           </div>
-        </li>
+        </ListItem>
       </List>
     </OurServicesSection>
   );

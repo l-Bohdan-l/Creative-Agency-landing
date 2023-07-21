@@ -38,7 +38,7 @@ export const AboutUs = () => {
           </AboutUsBtnWrapper>
         </AboutUsContent>
         <AboutUsPicture>
-          <AboutUsImg src={aboutUsImg} alt="about us" />
+          <AboutUsImg src={aboutUsImg} alt="people behind the table" />
         </AboutUsPicture>
       </AboutUsWrapper>
     </AboutUsContainer>
