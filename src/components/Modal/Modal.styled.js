@@ -9,8 +9,8 @@ export const BoxStyled = styled(Box)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  padding: 32px;
+  width: 200px;
+  padding: 5px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -39,33 +39,13 @@ export const ModalListItem = styled.li`
   line-height: 24px; /* 133.333% */
   letter-spacing: 0.18px;
   text-transform: capitalize;
-  opacity: 0.5;
+  opacity: 0.8;
   &:hover,
   &:focus {
     opacity: 1;
+    box-shadow: 0px 0px 0px 2px #e2e2e2;
   }
 `;
-
-// export const ButtonStyled = styled.button`
-//     display: flex;
-//     padding: 12px 50px;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     gap: 10px;
-//     border-radius: 24px;
-//     border: 1px solid #E2E2E2;
-//     border-radius: 24px;
-//     background-color: transparent;
-//     color: #E2E2E2;
-//     cursor: pointer;
-
-//     &:hover,
-//     &:focus {
-//         color: #F2F2F2;
-//         border: 1px solid #F2F2F2;
-//     }
-// `;
 
 export const MenuIconStyled = styled(MenuIcon)`
   color: #e2e2e2;
@@ -104,7 +84,7 @@ export const ButtonStyled = styled.button`
   &:hover,
   &:focus {
     color: #f2f2f2;
-    border: 1px solid #f2f2f2;
+    border: 1.5px solid #f2f2f2;
     opacity: 1;
   }
 `;

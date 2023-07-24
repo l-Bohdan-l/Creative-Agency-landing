@@ -20,7 +20,7 @@ import LiveTvOutlinedIcon from "@mui/icons-material/LiveTvOutlined";
 
 export default function OurServices() {
   return (
-    <OurServicesSection>
+    <OurServicesSection id="service">
       <OurServiceWrapper>
         <MainTitle>Our Services</MainTitle>
         <AboutUsSubtitle>Perfect and Fast Movement</AboutUsSubtitle>

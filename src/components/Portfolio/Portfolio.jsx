@@ -14,7 +14,7 @@ import secImage from "../../img/portfolio-sec-img.jpg";
 import thirdImage from "../../img/portfolio-third-img.jpg";
 export default function Portfolio() {
   return (
-    <PortfolioContainer>
+    <PortfolioContainer id="projects">
       <MainTitle>Our Portfolio</MainTitle>
       <SubTitle>What do we do</SubTitle>
       <MainParagraph>

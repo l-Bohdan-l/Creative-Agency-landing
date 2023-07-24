@@ -5,7 +5,6 @@ import {
   FirstImg,
   ImgWrapper,
   SecondImg,
-  SecondImgWrapper,
   Section,
   Subtitle,
   Title,

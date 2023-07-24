@@ -28,20 +28,29 @@ export default function BasicModal() {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        style={{ backgroundColor: "#000000d4" }}
       >
         <BoxStyled>
           <ModalNav>
             <ModalListItem>
-              <a href="#">Home</a>
+              <a onClick={handleClose} href="#hero">
+                Home
+              </a>
             </ModalListItem>
             <ModalListItem>
-              <a href="#">About</a>
+              <a onClick={handleClose} href="#about">
+                About
+              </a>
             </ModalListItem>
             <ModalListItem>
-              <a href="#">Service</a>
+              <a onClick={handleClose} href="#service">
+                Service
+              </a>
             </ModalListItem>
             <ModalListItem>
-              <a href="#">Projects</a>
+              <a onClick={handleClose} href="#projects">
+                Projects
+              </a>
             </ModalListItem>
           </ModalNav>
 

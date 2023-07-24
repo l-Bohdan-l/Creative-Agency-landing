@@ -84,6 +84,9 @@ export const ListWrapper = styled.div`
 export const LocationWrapper = styled.div`
   width: 250px;
   margin-bottom: 90px;
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 76px;
+  }
 `;
 
 export const ContactWrapper = styled.div`
@@ -96,6 +99,10 @@ export const SocialList = styled.ul`
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 17px;
+  }
 `;
 
 export const SocialListItem = styled.li`
@@ -107,6 +114,16 @@ export const SocialListItem = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 0px 2px #e2e2e2;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 export const CopyrightWrapper = styled.div`
@@ -125,11 +142,11 @@ export const CopyrightWrapper = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
-    padding-top: 72px;
-    padding-right: 100px;
-    padding-left: 100px;
-    padding-bottom: 35px;
-    width: 1440px;
+    padding-top: 16px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 33px;
+    width: 500px;
   }
 `;
 
@@ -144,6 +161,11 @@ export const CopyRightText = styled.p`
 
 export const CopyRightBorder = styled.div`
   border-top: 1px solid #e2e2e2;
+
+  @media screen and (min-width: 1440px) {
+    width: 500px;
+    margin: 0 auto;
+  }
 `;
 
 export const ContainerStyled = styled.div`
@@ -163,14 +185,16 @@ export const ContainerStyled = styled.div`
     padding-top: 132px;
     padding-right: 100px;
     padding-left: 100px;
-    padding-bottom: 35px;
+    /* padding-bottom: 35px; */
     width: 1440px;
   }
 `;
 
 export const FooterDescriptionWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 70px;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 70px;
+  }
 `;

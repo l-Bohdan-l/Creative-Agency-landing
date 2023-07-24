@@ -24,7 +24,7 @@ import clientPhoto from "../../img/clientPhoto.png";
 /* cSpell:enable */
 export const Hero = () => {
   return (
-    <HeroContainer>
+    <HeroContainer id="hero">
       <Title> Make your dream business goal come true </Title>
       <HeroSubtitle>
         when you need us for improve your business, then come with us to help

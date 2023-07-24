@@ -15,7 +15,7 @@ import aboutUsImg from "../../img/about-us-img.jpg";
 
 export const AboutUs = () => {
   return (
-    <AboutUsContainer>
+    <AboutUsContainer id="about">
       <MainTitle>About Us</MainTitle>
       <AboutUsSubtitle>Our Teammate</AboutUsSubtitle>
       <AboutUsWrapper>
