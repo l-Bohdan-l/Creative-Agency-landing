@@ -2,11 +2,11 @@ import { styled } from "styled-components";
 import blueDots from "../../img/svg/blueDots.svg";
 
 export const TestimonialContainer = styled.section`
-  margin-bottom: 100px;
+  margin-bottom: 178px;
 
   @media screen and (min-width: 1440px) {
     position: relative;
-    margin-bottom: 240px;
+    margin-bottom: 284px;
     &::before {
       content: "";
       position: absolute;

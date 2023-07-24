@@ -129,6 +129,12 @@ export const Button = styled.button`
   line-height: 24px; /* 150% */
   letter-spacing: 0.16px;
   background-color: transparent;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    color: #000;
+  }
 
   @media screen and (min-width: 1440px) {
     padding: 12px 50px;
