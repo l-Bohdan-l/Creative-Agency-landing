@@ -1,55 +1,11 @@
-@import-normalize;
+import styled from "styled-components";
 
-html {
-  /* scroll-behavior: smooth; */
-}
+export const BGWrapper = styled.div`
+  background-color: ${(props) =>
+    props.theme === "dark" ? "#0d0d0d" : "#FDFFFF"};
+`;
 
-body {
-  font-family: sans-serif;
-  line-height: 1.5;
-  background-color: #0d0d0d;
-  margin: 0;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-ul,
-ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  display: block;
-}
-
-.list {
-  list-style: none;
-}
-
-.link {
-  text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* #root {
+export const Wrapper = styled.div`
   @media screen and (max-width: 1439px) {
     background-image: url("./img/svg/orangeDot.svg"),
       url("./img/svg/blueDot.svg");
@@ -65,4 +21,4 @@ a {
     background-position: top 280px right 0, top 430px left 95px,
       top 800px left 280px, top 607px right 194px;
   }
-} */
+`;

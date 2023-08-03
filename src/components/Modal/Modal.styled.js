@@ -48,7 +48,7 @@ export const ModalListItem = styled.li`
 `;
 
 export const MenuIconStyled = styled(MenuIcon)`
-  color: #e2e2e2;
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1d1d1d")};
   @media screen and (min-width: 1440px) {
     display: none;
   }

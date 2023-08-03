@@ -8,13 +8,45 @@ export const HeaderStyled = styled.header`
   align-items: center;
 `;
 
+export const LogoWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const Logo = styled.img`
-  width: 91px;
-  height: 33px;
+  /* width: 91px;
+  height: 33px; */
+  width: 32px;
+  height: 30px;
+  display: inline-block;
 
   @media screen and (min-width: 1440px) {
-    width: 136px;
+    width: 53px;
     height: 50px;
+  }
+`;
+
+export const LogoText = styled.p`
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1d1d1d")};
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.14px;
+
+  @media screen and (min-width: 1440px) {
+    font-size: 20px;
+  }
+`;
+
+export const LogoTextSpan = styled.span`
+  font-size: 12px;
+  font-weight: 400;
+  @media screen and (min-width: 1440px) {
+    font-size: 16px;
   }
 `;
 

@@ -1,4 +1,4 @@
-import logo from "../../img/logo.png";
+import logo from "../../img/logo-without-text.png";
 // import { BoxStyled, ButtonStyled, ModalListItem, ModalNav } from '../Modal/Modal.styled';
 import {
   ButtonStyled,
@@ -6,12 +6,31 @@ import {
   Logo,
   ModalListItem,
   HeaderNav,
+  LogoWrapper,
+  LogoText,
+  LogoTextSpan,
 } from "./Header.styled";
 import BasicModal from "../Modal/Modal";
-export const Header = () => {
+import { Button } from "../Button/Button";
+import { useContext } from "react";
+import { ThemeContext } from "../../hooks/themeContext";
+export const Header = ({ toggleTheme }) => {
+  const theme = useContext(ThemeContext);
   return (
     <HeaderStyled>
-      <Logo src={logo} alt="company logo" />
+      {/* <LogoWrapper>
+        <Logo src={logo} alt="company logo" />
+        <Button toggleTheme={toggleTheme} />
+      </LogoWrapper> */}
+      <LogoWrapper>
+        <Logo src={logo} alt="logo" />
+        <LogoText theme={theme}>
+          Agency
+          <br></br>
+          <LogoTextSpan>Creative</LogoTextSpan>
+        </LogoText>
+        <Button toggleTheme={toggleTheme} />
+      </LogoWrapper>
       <BasicModal />
       <HeaderNav>
         <ModalListItem>

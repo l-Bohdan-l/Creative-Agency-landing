@@ -12,16 +12,19 @@ import {
   ModalListItem,
   ModalButtonStyled,
 } from "./Modal.styled";
+import { useContext } from "react";
+import { ThemeContext } from "../../hooks/themeContext";
 
 export default function BasicModal() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const theme = useContext(ThemeContext);
 
   return (
     <Wrapper>
       <ModalButtonStyled onClick={handleOpen}>
-        <MenuIconStyled />
+        <MenuIconStyled theme={theme} />
       </ModalButtonStyled>
       <Modal
         open={open}
