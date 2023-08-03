@@ -62,7 +62,7 @@ export const HeaderNav = styled.nav`
 `;
 
 export const ModalListItem = styled.li`
-  color: #e2e2e2;
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1D1D1D")};
   font-family: Quicksand;
   font-size: 18px;
   font-style: normal;
@@ -74,7 +74,6 @@ export const ModalListItem = styled.li`
   &:hover,
   &:focus {
     opacity: 1;
-    color: #f2f2f2;
   }
 `;
 
@@ -83,7 +82,7 @@ export const ButtonStyled = styled.button`
     display: none;
   }
 
-  color: #e2e2e2;
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#377DFF")};
   font-family: Quicksand;
   font-size: 16px;
   font-style: normal;
@@ -98,7 +97,8 @@ export const ButtonStyled = styled.button`
   align-items: center;
   gap: 10px;
   border-radius: 24px;
-  border: 1px solid #e2e2e2;
+  border: ${(props) =>
+    props.theme === "dark" ? "1px solid #e2e2e2" : "1px solid #377DFF"};
   border-radius: 24px;
   background-color: transparent;
   cursor: pointer;
@@ -108,7 +108,7 @@ export const ButtonStyled = styled.button`
   &:hover,
   &:focus {
     opacity: 1;
-    color: #f2f2f2;
-    border: 1px solid #f2f2f2;
+    /* color: #f2f2f2;
+    border: 1px solid #f2f2f2; */
   }
 `;

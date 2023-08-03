@@ -33,20 +33,22 @@ export const Header = ({ toggleTheme }) => {
       </LogoWrapper>
       <BasicModal />
       <HeaderNav>
-        <ModalListItem>
+        <ModalListItem theme={theme}>
           <a href="#hero">Home</a>
         </ModalListItem>
-        <ModalListItem>
+        <ModalListItem theme={theme}>
           <a href="#about">About</a>
         </ModalListItem>
-        <ModalListItem>
+        <ModalListItem theme={theme}>
           <a href="#service">Service</a>
         </ModalListItem>
-        <ModalListItem>
+        <ModalListItem theme={theme}>
           <a href="#projects">Projects</a>
         </ModalListItem>
       </HeaderNav>
-      <ButtonStyled type="button">Contact Us</ButtonStyled>
+      <ButtonStyled theme={theme} type="button">
+        Contact Us
+      </ButtonStyled>
     </HeaderStyled>
   );
 };

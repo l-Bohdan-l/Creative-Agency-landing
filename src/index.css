@@ -49,7 +49,7 @@ a {
   color: inherit;
 }
 
-/* #root {
+#root {
   @media screen and (max-width: 1439px) {
     background-image: url("./img/svg/orangeDot.svg"),
       url("./img/svg/blueDot.svg");
@@ -65,4 +65,4 @@ a {
     background-position: top 280px right 0, top 430px left 95px,
       top 800px left 280px, top 607px right 194px;
   }
-} */
+}

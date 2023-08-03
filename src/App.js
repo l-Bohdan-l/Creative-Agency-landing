@@ -22,24 +22,30 @@ function App() {
     console.log("theme", theme);
   };
 
+  const bodyTheme = document.body;
+  bodyTheme.style.backgroundColor = theme === "dark" ? "#0d0d0d" : "#FDFFFF";
+
   return (
-    <BGWrapper theme={theme}>
-      <Wrapper theme={theme}>
-        <ThemeContext.Provider value={theme}>
-          <ContainerStyled>
-            <Header toggleTheme={toggleTheme} />
-            <Hero />
-            <AboutUs />
-            <OurServices />
-            <Portfolio />
-            <Testimonial />
-            <Collaboration />
-            {/* <Button toggleTheme={toggleTheme} /> */}
-          </ContainerStyled>
-          <Footer />
-        </ThemeContext.Provider>
-      </Wrapper>
-    </BGWrapper>
+    // <BGWrapper theme={theme}>
+    //   <Wrapper
+    //   // theme={theme}
+    //   >
+    <ThemeContext.Provider value={theme}>
+      <ContainerStyled>
+        <Header toggleTheme={toggleTheme} />
+        <Hero />
+        <AboutUs />
+        <OurServices />
+        <Portfolio />
+        <Testimonial />
+        <Collaboration />
+        {/* <Button toggleTheme={toggleTheme} /> */}
+      </ContainerStyled>
+      <Footer />
+    </ThemeContext.Provider>
+    //{" "}
+    //   </Wrapper>
+    // </BGWrapper>
   );
 }
 
