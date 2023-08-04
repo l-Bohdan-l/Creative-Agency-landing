@@ -1,6 +1,8 @@
 import { styled } from "styled-components";
 import whiteDots from "../../img/svg/whiteDots.svg";
 import orangeDots from "../../img/svg/orangeDots.svg";
+import blueDots from "../../img/svg/blueDotsHero.svg";
+
 export const Section = styled.section`
   margin-bottom: 100px;
 
@@ -24,7 +26,9 @@ export const ImgWrapper = styled.div`
       position: absolute;
       top: -35px;
       left: -19px;
-      background-image: url(${whiteDots});
+      /* background-image: url(${whiteDots}); */
+      background-image: ${(props) =>
+        props.theme === "dark" ? `url(${whiteDots})` : `url(${blueDots})`};
       background-repeat: no-repeat;
       background-size: contain;
       width: 98px;
@@ -80,7 +84,8 @@ export const SecondImg = styled.img`
 `;
 
 export const Subtitle = styled.p`
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1D1D1D")};
   text-align: center;
   font-family: Nunito;
   font-size: 28px;
@@ -100,7 +105,8 @@ export const Subtitle = styled.p`
 `;
 
 export const Title = styled.h2`
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#464646")};
   font-family: Quicksand;
   font-size: 14px;
   font-style: normal;
@@ -119,7 +125,8 @@ export const Title = styled.h2`
 `;
 
 export const Btn = styled.button`
-  color: #0d0d0d;
+  /* color: #0d0d0d; */
+  color: ${(props) => (props.theme === "dark" ? "#0d0d0d" : "#ffffff")};
   font-family: Quicksand;
   font-size: 12px;
   font-style: normal;
@@ -128,7 +135,7 @@ export const Btn = styled.button`
   line-height: 18px; /* 150% */
   letter-spacing: 0.12px;
   border-radius: 24px;
-  background: #e2e2e2;
+  background: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#377dff")};
   box-shadow: 0px 4px 8px 0px rgba(55, 125, 255, 0.5);
   border: 0.7px solid #e2e2e2;
   cursor: pointer;
@@ -137,8 +144,9 @@ export const Btn = styled.button`
   transition: all 0.3s ease-in-out;
   &:hover,
   &:focus {
-    background: #377dff;
-    color: #e2e2e2;
+    background: ${(props) => (props.theme === "dark" ? "#377dff" : "#e2e2e2")};
+    /* color: #e2e2e2; */
+    color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#377dff")};
     box-shadow: 0px 4px 8px 0px rgba(55, 125, 255, 0.5);
   }
 

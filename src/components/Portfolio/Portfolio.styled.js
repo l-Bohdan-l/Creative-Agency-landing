@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import purpleDots from "../../img/svg/purpleDots.svg";
 
 export const PortfolioContainer = styled.section`
   display: flex;
@@ -6,6 +7,7 @@ export const PortfolioContainer = styled.section`
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;
+  position: relative;
 
   @media screen and (min-width: 1440px) {
     margin-bottom: 140px;
@@ -13,7 +15,8 @@ export const PortfolioContainer = styled.section`
 `;
 
 export const MainTitle = styled.h2`
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#377DFF")};
   font-family: Quicksand;
   font-size: 14px;
   font-style: normal;
@@ -32,7 +35,8 @@ export const MainTitle = styled.h2`
 `;
 
 export const SubTitle = styled.p`
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1D1D1D")};
   text-align: center;
   font-family: Nunito;
   font-size: 24px;
@@ -50,7 +54,8 @@ export const SubTitle = styled.p`
 `;
 
 export const MainParagraph = styled.p`
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#46464")};
   text-align: center;
   font-family: Quicksand;
   font-size: 14px;
@@ -66,6 +71,20 @@ export const MainParagraph = styled.p`
     letter-spacing: 0.2px;
     margin-bottom: 48px;
     width: 674px;
+    &::before {
+      content: "";
+      background-image: url(${purpleDots});
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 98px;
+      height: 70px;
+      position: absolute;
+      top: 145px;
+      right: 0px;
+      z-index: -1;
+      display: inline-block;
+      transform: rotate(168deg);
+    }
   }
 `;
 
@@ -120,8 +139,11 @@ export const PortfolioImgSpan = styled.span`
 export const Button = styled.button`
   padding: 10px 35px;
   border-radius: 24px;
-  border: 1px solid #e2e2e2;
-  color: #e2e2e2;
+  /* border: 1px solid #e2e2e2; */
+  border: ${(props) =>
+    props.theme === "dark" ? "1px solid #e2e2e2" : "1px solid #377DFF"};
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#377DFF")};
   font-family: Quicksand;
   font-size: 16px;
   font-style: normal;

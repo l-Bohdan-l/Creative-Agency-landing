@@ -9,11 +9,14 @@ import {
   Subtitle,
   Title,
 } from "./Collaboration.styled";
+import { useContext } from "react";
+import { ThemeContext } from "../../hooks/themeContext";
 
 export default function Collaboration() {
+  const theme = useContext(ThemeContext);
   return (
     <Section>
-      <ImgWrapper>
+      <ImgWrapper theme={theme}>
         <FirstImg
           src={collaborationImg1}
           alt="two people sitting behind the table and working on laptop"
@@ -26,9 +29,11 @@ export default function Collaboration() {
         {/* </SecondImgWrapper> */}
       </ImgWrapper>
       <div>
-        <Subtitle>Interesting Collaboration With Us?</Subtitle>
-        <Title>Help you to reach your business goal</Title>
-        <Btn type="button">Get Started</Btn>
+        <Subtitle theme={theme}>Interesting Collaboration With Us?</Subtitle>
+        <Title theme={theme}>Help you to reach your business goal</Title>
+        <Btn theme={theme} type="button">
+          Get Started
+        </Btn>
       </div>
     </Section>
   );

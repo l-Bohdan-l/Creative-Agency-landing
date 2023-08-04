@@ -37,7 +37,8 @@ export const TestimonialContainer = styled.section`
 `;
 
 export const TestimonialTitle = styled.h2`
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#377DFF")};
   font-family: Quicksand;
   font-size: 14px;
   font-style: normal;
@@ -56,7 +57,8 @@ export const TestimonialTitle = styled.h2`
 `;
 
 export const TestimonialSubtitle = styled.p`
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1D1D1D")};
   text-align: center;
   font-family: Nunito;
   font-size: 24px;
@@ -84,7 +86,8 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   border-radius: 20px;
-  background: #0b0f15;
+  /* background: #0b0f15; */
+  background-color: ${(props) => (props.theme === "dark" ? "#0b0f15" : "#fff")};
   box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.05);
   padding: 40px;
 
@@ -123,7 +126,8 @@ export const Image = styled.img`
 `;
 
 export const ClientName = styled.p`
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#377DFF")};
   font-family: Quicksand;
   font-size: 18px;
   font-style: normal;
@@ -139,7 +143,7 @@ export const ClientName = styled.p`
 `;
 
 export const ClientPosition = styled.p`
-  color: #e2e2e2;
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#464646")};
   font-family: Quicksand;
   font-size: 11px;
   font-style: normal;
@@ -154,7 +158,7 @@ export const ClientPosition = styled.p`
 `;
 
 export const Review = styled.p`
-  color: #e2e2e2;
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#464646")};
   font-family: Quicksand;
   font-size: 14px;
   font-style: normal;

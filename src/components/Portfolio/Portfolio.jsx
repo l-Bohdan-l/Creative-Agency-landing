@@ -12,12 +12,15 @@ import {
 import firstImage from "../../img/portfolio-first-img.jpg";
 import secImage from "../../img/portfolio-sec-img.jpg";
 import thirdImage from "../../img/portfolio-third-img.jpg";
+import { useContext } from "react";
+import { ThemeContext } from "../../hooks/themeContext";
 export default function Portfolio() {
+  const theme = useContext(ThemeContext);
   return (
     <PortfolioContainer id="projects">
-      <MainTitle>Our Portfolio</MainTitle>
-      <SubTitle>What do we do</SubTitle>
-      <MainParagraph>
+      <MainTitle theme={theme}>Our Portfolio</MainTitle>
+      <SubTitle theme={theme}>What do we do</SubTitle>
+      <MainParagraph theme={theme}>
         all projects that we have already done , proven can help to use more
         comfortable, then can used by client from our business
       </MainParagraph>
@@ -45,7 +48,9 @@ export default function Portfolio() {
           <PortfolioImgSpan>Design Byte App</PortfolioImgSpan>
         </PortfolioListItem>
       </PortfolioList>
-      <Button type="button">See All Portfolio</Button>
+      <Button theme={theme} type="button">
+        See All Portfolio
+      </Button>
     </PortfolioContainer>
   );
 }

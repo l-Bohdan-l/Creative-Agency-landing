@@ -12,54 +12,59 @@ import {
   TestimonialSubtitle,
   TestimonialTitle,
 } from "./Testimonial.styled";
+import { useContext } from "react";
+import { ThemeContext } from "../../hooks/themeContext";
 
 export default function Testimonial() {
+  const theme = useContext(ThemeContext);
   return (
     <TestimonialContainer>
-      <TestimonialTitle>Testimonial</TestimonialTitle>
-      <TestimonialSubtitle>People Talk about us</TestimonialSubtitle>
+      <TestimonialTitle theme={theme}>Testimonial</TestimonialTitle>
+      <TestimonialSubtitle theme={theme}>
+        People Talk about us
+      </TestimonialSubtitle>
       <List>
-        <ListItem>
+        <ListItem theme={theme}>
           <ImageBlockWrapper>
             <ImageWrapper>
               <Image src={clientPhoto} alt="client" />
             </ImageWrapper>
             <div>
-              <ClientName>Angel Rose</ClientName>
-              <ClientPosition>Creative Manager</ClientPosition>
+              <ClientName theme={theme}>Angel Rose</ClientName>
+              <ClientPosition theme={theme}>Creative Manager</ClientPosition>
             </div>
           </ImageBlockWrapper>
-          <Review>
+          <Review theme={theme}>
             “ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
             ipsum dolor sit amet, consectetur adipiscing elit”
           </Review>
         </ListItem>
-        <ListItem>
+        <ListItem theme={theme}>
           <ImageBlockWrapper>
             <ImageWrapper>
               <Image src={clientPhoto} alt="client" />
             </ImageWrapper>
             <div>
-              <ClientName>Angel Rose</ClientName>
-              <ClientPosition>Creative Manager</ClientPosition>
+              <ClientName theme={theme}>Angel Rose</ClientName>
+              <ClientPosition theme={theme}>Creative Manager</ClientPosition>
             </div>
           </ImageBlockWrapper>
-          <Review>
+          <Review theme={theme}>
             “ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
             ipsum dolor sit amet, consectetur adipiscing elit”
           </Review>
         </ListItem>
-        <ListItem>
+        <ListItem theme={theme}>
           <ImageBlockWrapper>
             <ImageWrapper>
               <Image src={clientPhoto} alt="client" />
             </ImageWrapper>
             <div>
-              <ClientName>Angel Rose</ClientName>
-              <ClientPosition>Creative Manager</ClientPosition>
+              <ClientName theme={theme}>Angel Rose</ClientName>
+              <ClientPosition theme={theme}>Creative Manager</ClientPosition>
             </div>
           </ImageBlockWrapper>
-          <Review>
+          <Review theme={theme}>
             “ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
             ipsum dolor sit amet, consectetur adipiscing elit”
           </Review>
