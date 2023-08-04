@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Creative-Agency-landing/static/css/main.ad447a1c.css",
-    "main.js": "/Creative-Agency-landing/static/js/main.910d75cb.js",
+    "main.js": "/Creative-Agency-landing/static/js/main.7ec5009f.js",
     "static/js/787.28faf2c0.chunk.js": "/Creative-Agency-landing/static/js/787.28faf2c0.chunk.js",
     "static/media/clientPhoto.png": "/Creative-Agency-landing/static/media/clientPhoto.c65e7a47b93953accacd.png",
     "static/media/about-us-img.jpg": "/Creative-Agency-landing/static/media/about-us-img.25a9dbf35fcc6619f963.jpg",
@@ -14,6 +14,7 @@
     "static/media/clientPhoto.jpg": "/Creative-Agency-landing/static/media/clientPhoto.8b20500cf2f36b1a8c43.jpg",
     "static/media/purpleDots.svg": "/Creative-Agency-landing/static/media/purpleDots.b93ef870e8ed6e87fa991feae30f32c3.svg",
     "static/media/blueDots.svg": "/Creative-Agency-landing/static/media/blueDots.4874e4fa5985f56fe37e77f2d8567ca0.svg",
+    "static/media/blueDotsHero.svg": "/Creative-Agency-landing/static/media/blueDotsHero.afdc7d4e350d8998fc7484f28242bc12.svg",
     "static/media/whiteDots.svg": "/Creative-Agency-landing/static/media/whiteDots.4932f404b6cd11cdfe73ac603216af4c.svg",
     "static/media/greyDots.svg": "/Creative-Agency-landing/static/media/greyDots.0f86ba0b5663b6ce3e35321195edfeb5.svg",
     "static/media/orangeDots.svg": "/Creative-Agency-landing/static/media/orangeDots.fef2e8bbea0ffe9ae4bdf0f650e0eff1.svg",
@@ -25,14 +26,15 @@
     "static/media/linkedin.svg": "/Creative-Agency-landing/static/media/linkedin.bc90358d8c6ceefad07b042185770b4d.svg",
     "static/media/twitter.svg": "/Creative-Agency-landing/static/media/twitter.8f523457a46248e33e521c8d4751aeae.svg",
     "static/media/pen-tool.svg": "/Creative-Agency-landing/static/media/pen-tool.2cf466f1bc5d0fd4936d89f9c02f2ce1.svg",
+    "static/media/pen-tool-white.svg": "/Creative-Agency-landing/static/media/pen-tool-white.e552bd2bc69fbee3816027c928fb63de.svg",
     "static/media/facebook.svg": "/Creative-Agency-landing/static/media/facebook.b6037e561df9073028ee32c18b9db3d1.svg",
     "static/media/star.svg": "/Creative-Agency-landing/static/media/star.19a10e80974f00b39b4e1140fe22ee80.svg",
     "main.ad447a1c.css.map": "/Creative-Agency-landing/static/css/main.ad447a1c.css.map",
-    "main.910d75cb.js.map": "/Creative-Agency-landing/static/js/main.910d75cb.js.map",
+    "main.7ec5009f.js.map": "/Creative-Agency-landing/static/js/main.7ec5009f.js.map",
     "787.28faf2c0.chunk.js.map": "/Creative-Agency-landing/static/js/787.28faf2c0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ad447a1c.css",
-    "static/js/main.910d75cb.js"
+    "static/js/main.7ec5009f.js"
   ]
 }
