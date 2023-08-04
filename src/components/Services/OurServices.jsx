@@ -12,58 +12,82 @@ import {
   OurServicesSection,
 } from "./OurServices.styled";
 import pen from "../../img/svg/pen-tool.svg";
+import penWhite from "../../img/svg/pen-tool-white.svg";
 
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import DesktopWindowsOutlinedIcon from "@mui/icons-material/DesktopWindowsOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import LiveTvOutlinedIcon from "@mui/icons-material/LiveTvOutlined";
+import { useContext } from "react";
+import { ThemeContext } from "../../hooks/themeContext";
 
 export default function OurServices() {
+  const theme = useContext(ThemeContext);
   return (
     <OurServicesSection id="service">
       <OurServiceWrapper>
-        <MainTitle>Our Services</MainTitle>
-        <AboutUsSubtitle>Perfect and Fast Movement</AboutUsSubtitle>
-        <MainText>
+        <MainTitle theme={theme}>Our Services</MainTitle>
+        <AboutUsSubtitle theme={theme}>
+          Perfect and Fast Movement
+        </AboutUsSubtitle>
+        <MainText theme={theme}>
           We move with make a Creative Strategy for help your business goal, we
           help to improve your income by a services we have. make your content
           look interesting and make people look for your business
         </MainText>
-        <Button>
+        <Button theme={theme}>
           Read more <ArrowForwardOutlinedIcon />
         </Button>
       </OurServiceWrapper>
       <List>
-        <ListItem>
+        <ListItem theme={theme}>
           <div>
-            <IconWrapper position="first">
-              <DesktopWindowsOutlinedIcon sx={{ fontSize: 42 }} />
+            <IconWrapper theme={theme} position="first">
+              <DesktopWindowsOutlinedIcon
+                sx={{
+                  fontSize: 42,
+                  fill: theme === "dark" ? "black" : "white",
+                }}
+              />
             </IconWrapper>
-            <ListItemText>Social Media Management</ListItemText>
+            <ListItemText theme={theme}>Social Media Management</ListItemText>
           </div>
         </ListItem>
-        <ListItem>
+        <ListItem theme={theme}>
           <div>
-            <IconWrapper position="second">
-              <SettingsOutlinedIcon sx={{ fontSize: 42 }} />
+            <IconWrapper theme={theme} position="second">
+              <SettingsOutlinedIcon
+                sx={{
+                  fontSize: 42,
+                  fill: theme === "dark" ? "black" : "white",
+                }}
+              />
             </IconWrapper>
-            <ListItemText>Search Engine Optimization</ListItemText>
+            <ListItemText theme={theme}>
+              Search Engine Optimization
+            </ListItemText>
           </div>
         </ListItem>
-        <ListItem>
+        <ListItem theme={theme}>
           <div>
-            <IconWrapper position="third">
-              <IconStyled src={pen} alt="pen" />
+            <IconWrapper theme={theme} position="third">
+              {theme === "dark" && <IconStyled src={pen} alt="pen" />}
+              {theme === "light" && <IconStyled src={penWhite} alt="pen" />}
             </IconWrapper>
-            <ListItemText>Design</ListItemText>
+            <ListItemText theme={theme}>Design</ListItemText>
           </div>
         </ListItem>
-        <ListItem>
+        <ListItem theme={theme}>
           <div>
-            <IconWrapper position="fourth">
-              <LiveTvOutlinedIcon sx={{ fontSize: 42 }} />
+            <IconWrapper theme={theme} position="fourth">
+              <LiveTvOutlinedIcon
+                sx={{
+                  fontSize: 42,
+                  fill: theme === "dark" ? "black" : "white",
+                }}
+              />
             </IconWrapper>
-            <ListItemText>Ads</ListItemText>
+            <ListItemText theme={theme}>Ads</ListItemText>
           </div>
         </ListItem>
       </List>

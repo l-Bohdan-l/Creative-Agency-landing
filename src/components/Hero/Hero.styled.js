@@ -1,6 +1,8 @@
 import { styled } from "styled-components";
 import greyDots from "../../img/svg/greyDots.svg";
 import orangeDots from "../../img/svg/orangeDots.svg";
+import blueDots from "../../img/svg/blueDotsHero.svg";
+
 // import blueDot from "../../img/svg/blueDot.svg";
 // import orangeDot from "../../img/svg/orangeDot.svg";
 
@@ -12,7 +14,7 @@ export const HeroContainer = styled.section`
 `;
 
 export const Title = styled.h1`
-  color: #e2e2e2;
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1D1D1D")};
   text-align: center;
   font-family: Nunito;
   font-size: 28px;
@@ -33,7 +35,7 @@ export const Title = styled.h1`
 `;
 
 export const HeroSubtitle = styled.p`
-  color: #e2e2e2;
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#464646")};
   text-align: center;
   font-family: Nunito;
   font-size: 14px;
@@ -58,12 +60,18 @@ export const StyledButton = styled.button`
   width: 145px;
   height: 40px;
   border-radius: 24px;
-  background: #e2e2e2;
-  box-shadow: 0px 4px 8px 0px rgba(55, 125, 255, 0.5);
+  /* background: #e2e2e2; */
+  /* box-shadow: 0px 4px 8px 0px rgba(55, 125, 255, 0.5); */
+  box-shadow: ${(props) =>
+    props.theme === "dark"
+      ? "0px 4px 8px 0px rgba(55, 125, 255, 0.5)"
+      : "0px 4px 8px 0px rgba(55, 125, 255, 0.50)"};
   margin: 0 auto;
   display: block;
 
-  color: #0d0d0d;
+  /* color: #0d0d0d; */
+  color: ${(props) => (props.theme === "dark" ? "#0d0d0d" : "#FFF")};
+  background: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#377DFF")};
   font-family: Quicksand;
   font-size: 12px;
   font-style: normal;
@@ -75,9 +83,11 @@ export const StyledButton = styled.button`
   cursor: pointer;
   &:hover,
   &:focus {
-    background: #377dff;
+    /* background: #377dff; */
+    background: ${(props) => (props.theme === "dark" ? "#377DFF" : "#e2e2e2")};
     box-shadow: 0px 4px 8px 0px rgba(55, 125, 255, 0.5);
-    color: #e2e2e2;
+    /* color: #e2e2e2; */
+    color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#0d0d0d")};
   }
 
   @media screen and (min-width: 1440px) {
@@ -109,7 +119,9 @@ export const HeroImgPicture = styled.picture`
   position: relative;
   &::before {
     content: "";
-    background-image: url(${greyDots});
+    /* background-image: url(${greyDots}); */
+    background-image: ${(props) =>
+      props.theme === "dark" ? `url(${greyDots})` : `url(${blueDots})`};
     background-repeat: no-repeat;
     background-size: contain;
     width: 98px;
@@ -155,7 +167,8 @@ export const RatingWrapper = styled.div`
   width: 99px;
   height: 53px;
   border-radius: 6px;
-  background: #0d0d0d;
+  /* background: #0d0d0d; */
+  background: ${(props) => (props.theme === "dark" ? "#0d0d0d" : "#ffffff")};
   box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
   padding-top: 5px;
   padding-right: 15px;
@@ -174,7 +187,8 @@ export const RatingWrapper = styled.div`
 
 export const RatingFirstSubtitle = styled.p`
   display: inline-block;
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1D1D1D")};
   text-align: center;
   font-family: Quicksand;
   font-size: 6px;
@@ -202,7 +216,7 @@ export const RatingStar = styled.img`
 `;
 
 export const RatingSecondSubtitle = styled.p`
-  color: #e2e2e2;
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1D1D1D")};
   text-align: center;
   font-family: Nunito;
   font-size: 12px;
@@ -245,8 +259,10 @@ export const ReviewWrapper = styled.div`
   padding-right: 9px;
   padding-bottom: 10px;
   padding-left: 10px;
-  background-color: #0d0d0d;
+  /* background-color: #0d0d0d; */
+  background-color: ${(props) => (props.theme === "dark" ? "#0d0d0d" : "#FFF")};
   border-radius: 6px;
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
 
   @media screen and (min-width: 1440px) {
     width: 166px;
@@ -261,7 +277,8 @@ export const ReviewWrapper = styled.div`
 `;
 
 export const ReviewClientName = styled.p`
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1D1D1D")};
   font-family: Quicksand;
   font-size: 5px;
   font-weight: 600;
@@ -275,7 +292,7 @@ export const ReviewClientName = styled.p`
 `;
 
 export const ReviewClientPosition = styled.p`
-  color: #e2e2e2;
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1D1D1D")};
   font-family: Quicksand;
   font-size: 3px;
   font-style: normal;
@@ -304,7 +321,7 @@ export const ReviewClientPhotoWrapper = styled.div`
 `;
 
 export const Review = styled.p`
-  color: #e2e2e2;
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1D1D1D")};
   font-family: Nunito;
   font-size: 5px;
   font-style: normal;

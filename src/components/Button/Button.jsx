@@ -10,8 +10,8 @@ export const Button = ({ toggleTheme }) => {
   return (
     <div>
       <ButtonStyled theme={theme} type="button" onClick={toggleTheme}>
-        {theme === "light" && <MdDarkMode size={32} fill="black" />}
-        {theme === "dark" && <BsSunFill size={32} fill="white" />}
+        {theme === "light" && <MdDarkMode size={25} fill="black" />}
+        {theme === "dark" && <BsSunFill size={25} fill="white" />}
       </ButtonStyled>
     </div>
   );

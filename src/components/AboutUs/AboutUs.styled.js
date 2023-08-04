@@ -39,7 +39,8 @@ export const AboutUsContent = styled.div`
 `;
 
 export const MainTitle = styled.h2`
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#377DFF")};
   font-family: Quicksand;
   font-size: 14px;
   font-style: normal;
@@ -58,7 +59,7 @@ export const MainTitle = styled.h2`
 `;
 
 export const AboutUsSubtitle = styled.h3`
-  color: #e2e2e2;
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1D1D1D")};
   font-family: Nunito;
   font-size: 24px;
   font-style: normal;
@@ -74,7 +75,8 @@ export const AboutUsSubtitle = styled.h3`
 `;
 
 export const AboutUsText = styled.p`
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#464646")};
   font-family: Quicksand;
   font-size: 14px;
   font-style: normal;
@@ -103,7 +105,23 @@ export const AboutUsBtnWrapper = styled.div`
 `;
 
 export const AboutUsBtn = styled.button`
-  color: ${(props) => (props.second ? "#E2E2E2" : "#0d0d0d")};
+  /* width: 150px; */
+  /* height: 38px; */
+  color: ${(props) => {
+    // props.second ? "#E2E2E2" : "#0d0d0d"
+    if (props.second && props.theme === "dark") {
+      return "#E2E2E2";
+    }
+    if (props.second && props.theme === "light") {
+      return "#377DFF";
+    }
+    if (!props.second && props.theme === "dark") {
+      return "#0d0d0d";
+    }
+    if (!props.second && props.theme === "light") {
+      return "#ffffff";
+    }
+  }};
   font-family: Quicksand;
   font-size: 12px;
   font-style: normal;
@@ -112,10 +130,38 @@ export const AboutUsBtn = styled.button`
   line-height: 18px; /* 150% */
   letter-spacing: 0.12px;
   border-radius: 24px;
-  background: ${(props) => (props.second ? "#0d0d0d" : "#e2e2e2")};
+  /* background: ${(props) => (props.second ? "#0d0d0d" : "#e2e2e2")}; */
+  background: ${(props) => {
+    if (props.second && props.theme === "dark") {
+      return "#0d0d0d";
+    }
+    if (props.second && props.theme === "light") {
+      return "#ffffff";
+    }
+    if (!props.second && props.theme === "dark") {
+      return "#e2e2e2";
+    }
+    if (!props.second && props.theme === "light") {
+      return "#377DFF";
+    }
+  }};
   box-shadow: ${(props) =>
     props.second ? "none" : "0px 4px 8px 0px rgba(55, 125, 255, 0.5)"};
-  border: 0.7px solid #e2e2e2;
+  /* border: 0.7px solid #e2e2e2; */
+  border: ${(props) => {
+    if (props.second && props.theme === "dark") {
+      return "0.7px solid #E2E2E2";
+    }
+    if (props.second && props.theme === "light") {
+      return "0.7px solid #377DFF";
+    }
+    if (!props.second && props.theme === "dark") {
+      return "0.7px solid #E2E2E2";
+    }
+    if (!props.second && props.theme === "light") {
+      return "none";
+    }
+  }};
   cursor: pointer;
 
   display: flex;
@@ -126,10 +172,54 @@ export const AboutUsBtn = styled.button`
   transition: all 0.3s ease-in-out;
   &:hover,
   &:focus {
-    background: ${(props) => (props.second ? "#fff" : "#377DFF")};
-    color: ${(props) => (props.second ? "#000" : "#E2E2E2")};
+    /* background: ${(props) => (props.second ? "#fff" : "#377DFF")}; */
+    background: ${(props) => {
+      if (props.second && props.theme === "dark") {
+        return "#ffffff";
+      }
+      if (props.second && props.theme === "light") {
+        return "#377DFF";
+      }
+      if (!props.second && props.theme === "dark") {
+        return "#000000";
+      }
+      if (!props.second && props.theme === "light") {
+        return "#ffffff";
+      }
+    }};
+    /* color: ${(props) => (props.second ? "#000" : "#E2E2E2")}; */
+    color: ${(props) => {
+      if (props.second && props.theme === "dark") {
+        return "#000";
+      }
+      if (props.second && props.theme === "light") {
+        return "#ffffff";
+      }
+      if (!props.second && props.theme === "dark") {
+        return "#E2E2E2";
+      }
+      if (!props.second && props.theme === "light") {
+        return "#000000";
+      }
+    }};
     box-shadow: ${(props) =>
       props.second ? "none" : "0px 4px 8px 0px rgba(55, 125, 255, 0.5)"};
+    /* border: ${(props) =>
+      props.second ? "0.7px solid #000" : "0.7px solid #377DFF"}; */
+    border: ${(props) => {
+      if (props.second && props.theme === "dark") {
+        return "0.7px solid #000";
+      }
+      if (props.second && props.theme === "light") {
+        return "0.7px solid #ffffff";
+      }
+      if (!props.second && props.theme === "dark") {
+        return "0.7px solid #ffffff";
+      }
+      if (!props.second && props.theme === "light") {
+        return "none";
+      }
+    }};
   }
 
   @media screen and (min-width: 1440px) {

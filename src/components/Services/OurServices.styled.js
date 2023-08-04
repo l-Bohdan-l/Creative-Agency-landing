@@ -13,7 +13,8 @@ export const OurServicesSection = styled.section`
 `;
 
 export const MainTitle = styled.h2`
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#377DFF")};
   font-family: Quicksand;
   font-size: 14px;
   font-style: normal;
@@ -33,7 +34,7 @@ export const MainTitle = styled.h2`
 `;
 
 export const AboutUsSubtitle = styled.h3`
-  color: #e2e2e2;
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1D1D1D")};
   text-align: center;
   font-family: Nunito;
   font-size: 24px;
@@ -53,7 +54,8 @@ export const AboutUsSubtitle = styled.h3`
 `;
 
 export const MainText = styled.p`
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#464646")};
   text-align: center;
   font-family: Quicksand;
   font-size: 14px;
@@ -74,7 +76,7 @@ export const MainText = styled.p`
 export const Button = styled.button`
   background-color: transparent;
   border: none;
-  color: #e2e2e2;
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#377DFF")};
   font-family: Quicksand;
   font-size: 14px;
   font-style: normal;
@@ -87,6 +89,7 @@ export const Button = styled.button`
   gap: 10px;
   align-self: flex-start;
   margin-bottom: 27px;
+  cursor: pointer;
 
   @media screen and (min-width: 1440px) {
     font-size: 20px;
@@ -121,17 +124,42 @@ export const IconWrapper = styled.div`
 
   background-color: ${(props) => {
     // return props.position === "first" && "#E2E2E2";
-    switch (props.position) {
-      case "first":
-        return "#E2E2E2";
-      case "second":
-        return "#FF4646";
-      case "third":
-        return "#8EEA77";
-      case "fourth":
-        return "#FFB21A";
-      default:
-        return "#E2E2E2";
+    // switch (props.position) {
+    //   case "first":
+    //     return "#E2E2E2";
+    //   case "second":
+    //     return "#FF4646";
+    //   case "third":
+    //     return "#8EEA77";
+    //   case "fourth":
+    //     return "#FFB21A";
+    //   default:
+    //     return "#E2E2E2";
+    // }
+    if (props.theme === "dark" && props.position === "first") {
+      return "#E2E2E2";
+    }
+    if (props.theme === "dark" && props.position === "second") {
+      return "#FF4646";
+    }
+    if (props.theme === "dark" && props.position === "third") {
+      return "#8EEA77";
+    }
+    if (props.theme === "dark" && props.position === "fourth") {
+      return "#FFB21A";
+    }
+
+    if (props.theme === "light" && props.position === "first") {
+      return "#377DFF";
+    }
+    if (props.theme === "light" && props.position === "second") {
+      return "#FF2D2D";
+    }
+    if (props.theme === "light" && props.position === "third") {
+      return "#7CE761";
+    }
+    if (props.theme === "light" && props.position === "fourth") {
+      return "#FFA800";
     }
   }};
 `;
@@ -142,7 +170,8 @@ export const IconStyled = styled.img`
 
 export const ListItemText = styled.p`
   box-sizing: border-box;
-  color: #e2e2e2;
+  /* color: #e2e2e2; */
+  color: ${(props) => (props.theme === "dark" ? "#e2e2e2" : "#1D1D1D")};
   text-align: center;
   font-family: Quicksand;
   font-size: 16px;
@@ -162,7 +191,11 @@ export const ListItem = styled.li`
   box-sizing: border-box;
   padding: 35px 81px;
   border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  border: ${(props) =>
+    props.theme === "dark"
+      ? "1px solid rgba(255, 255, 255, 0.1)"
+      : "1px solid rgba(0, 0, 0, 0.10)"};
   width: 262px;
   height: 269px;
 

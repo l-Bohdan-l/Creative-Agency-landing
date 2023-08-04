@@ -20,8 +20,8 @@ export const ButtonStyled = styled.button`
 `;
 
 export const MdDarkModeStyled = styled(MdDarkMode)`
-  width: 24px;
+  size: 24px;
   @media screen and (min-width: 1440px) {
-    width: 32px;
+    size: 32px;
   }
 `;
